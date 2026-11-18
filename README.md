@@ -25,16 +25,20 @@ One-time setup: repo **Settings → Pages → Source: GitHub Actions**. Live URL
 | Color and information | One sequential hue, used only for count, on a fixed scale (a shade means the same count under any filter). Zero cells are left blank |
 | Heatmap | Category × vendor family; the "Dots" toggle turns each cell into one countable mark per incident |
 | Small multiples | One bar strip per category: same x (half-years) and same y scale in every row, one shared time axis |
-| Data-ink | No legend box, no borders around the chart, direct labels, counts printed only where ≥ 3, annotation computed from the data |
+| Data-ink | No legend box, no borders around the chart, direct labels, no numbers printed inside cells (exact counts are in the tooltip, margin totals and screen-reader labels), annotation computed from the data |
 
 ## UI standards applied
-- **shadcn/ui + Radix**: Button, Badge, ToggleGroup, Tooltip, DropdownMenu, Slider, Sheet in `src/components/ui/` (new-york style, neutral tokens, light/dark via `prefers-color-scheme`). Written by hand because the shadcn registry was unreachable when this was built; they follow the same structure, so `npx shadcn@latest add` can overwrite them.
+- **shadcn/ui + Radix**: Button, Badge, ToggleGroup, Tooltip, DropdownMenu, Slider, Sheet in `src/components/ui/` (new-york style, neutral tokens, light theme only; chart ramp is Virginia Tech Chicago Maroon `#861F41`). Written by hand because the shadcn registry was unreachable when this was built; they follow the same structure, so `npx shadcn@latest add` can overwrite them.
 - **Vaul**: incident list is a drag-to-dismiss drawer under 768px, a side Sheet above.
 - **Motion (Emil Kowalski)**: only `transform`/`opacity` animate; strong ease-out curves; 125–180 ms for tooltips/menus, ≤ 300 ms for sheets; press feedback `scale(0.97)`; tooltips open instantly once one is open; no animation on filter changes or keyboard navigation; `prefers-reduced-motion` respected.
 - **Human-centered design**: every control is visible and labelled (signifiers), every action gives immediate feedback (selection ring, dimmed rows, live period label), filters are reversible (Reset, Esc closes the panel), empty state explains itself, state is in the URL so a view can be shared.
 - **Accessibility**: cells are buttons with full aria-labels; arrow keys move between cells (roving tabindex); visible focus rings; tooltip also opens on keyboard focus; 44px header tap targets.
 
+## Header
+The hero (title, summary line, per-class counts) is computed from the current filters, so it changes with the class toggles, vendor filter and period slider.
+
 ## Data notes
 - The CSV starts with a BOM; it is stripped on load.
 - "Affected agentic AI" mixes AI products with people/organisations harmed by AI output. `vendorOf()` in `src/lib/data.ts` groups them by regex; anything unmatched becomes "Other / non-vendor". Adjust the rules there.
+- Vendor families are grouped by hand, and "Other / non-vendor" holds people and organisations harmed by AI output.
 - Counts are logged incidents, not rates. A few source dates look out of order (e.g. some `Nov-23` rows sit among `Feb-23`); they are used as given.

@@ -184,7 +184,7 @@ export function Heatmap({ filters, sel, onSelect }: { filters: Filters; sel: Sel
                               onBlur={() => setHover(null)}
                               onPointerEnter={() => setHover({ cat, vendor: v })}
                               onPointerLeave={() => setHover(null)}
-                              style={filters.mode === "shade" ? { backgroundColor: `color-mix(in oklab, var(--heat-hi) ${p}%, var(--heat-lo))`, color: p >= 58 ? "var(--heat-fg)" : undefined } : undefined}
+                              style={filters.mode === "shade" ? { backgroundColor: `color-mix(in oklab, var(--heat-hi) ${p}%, var(--heat-lo))` } : undefined}
                               className={cn(
                                 "m-px flex h-7 items-center justify-center rounded-[3px] text-xs font-medium tabular-nums outline-none transition-opacity duration-150 focus-visible:ring-[3px] focus-visible:ring-ring",
                                 filters.mode === "dots" && "hover:bg-accent",
@@ -192,9 +192,7 @@ export function Heatmap({ filters, sel, onSelect }: { filters: Filters; sel: Sel
                                 dimCell && "opacity-30",
                               )}
                             >
-                              {filters.mode === "shade"
-                                ? n >= 3 && n
-                                : (
+                              {filters.mode === "dots" && (
                                   <span className="flex max-w-[3.2rem] flex-wrap justify-center gap-[2px]" aria-hidden>
                                     {Array.from({ length: n }, (_, i) => <i key={i} className="size-[5px] rounded-full" style={{ background: "var(--heat-hi)" }} />)}
                                   </span>
