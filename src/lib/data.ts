@@ -45,17 +45,18 @@ export const incidents: Incident[] = csvParse(raw.replace(/^﻿/, ""))
       bin: (year - 2021) * 2 + (month >= 6 ? 1 : 0),
     }
   })
+  // "Data exposure" is intentionally left out of this display (15 of the 192 logged rows)
+  .filter((d) => d.cls !== "Data exposure")
 
 export const NBINS = Math.max(...incidents.map((d) => d.bin)) + 1
 export const binLabel = (b: number) => `${2021 + Math.floor(b / 2)} H${(b % 2) + 1}`
 
-export const CLASS_ORDER = ["Safety/guardrail failure", "Security exploit", "Data exposure"]
+export const CLASS_ORDER = ["Safety/guardrail failure", "Security exploit"]
 export const CLASS_LABEL: Record<string, string> = {
   "Safety/guardrail failure": "Safety / guardrail failure",
   "Security exploit": "Security exploit",
-  "Data exposure": "Data exposure",
 }
-export const CLASS_SHORT: Record<string, string> = { "Safety/guardrail failure": "Safety", "Security exploit": "Security", "Data exposure": "Data" }
+export const CLASS_SHORT: Record<string, string> = { "Safety/guardrail failure": "Safety", "Security exploit": "Security" }
 
 const count = <T,>(xs: T[], key: (x: T) => string) => {
   const m = new Map<string, number>()
@@ -72,8 +73,9 @@ export const CATS = [...catTotal.keys()].sort(
   (a, b) => CLASS_ORDER.indexOf(catClass.get(a)!) - CLASS_ORDER.indexOf(catClass.get(b)!) || catTotal.get(b)! - catTotal.get(a)!,
 )
 export const classOf = (cat: string) => catClass.get(cat)!
-/** columns: biggest first, "Other" last */
-export const VENDOR_LIST = [...vTotal.keys()].filter((v) => v !== OTHER).sort((a, b) => vTotal.get(b)! - vTotal.get(a)!).concat(vTotal.has(OTHER) ? [OTHER] : [])
+/** columns in a fixed, editorial order: the big model labs first, then tooling, then everything else */
+const VENDOR_ORDER = ["OpenAI", "Anthropic", "Google", "Meta", "xAI", "Microsoft", "Coding agents & dev tools", "Companion apps", OTHER]
+export const VENDOR_LIST = [...VENDOR_ORDER.filter((v) => vTotal.has(v)), ...[...vTotal.keys()].filter((v) => !VENDOR_ORDER.includes(v))]
 export const VENDOR_SHORT: Record<string, [string, string?]> = {
   "Coding agents & dev tools": ["Coding agents", "& dev tools"],
   "Companion apps": ["Companion", "apps"],
