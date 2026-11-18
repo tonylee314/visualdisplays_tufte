@@ -1,42 +1,14 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Agentic AI Incidents</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<main>
-  <header>
-    <h1>Where agentic AI goes wrong</h1>
-    <p class="dek">192 logged incidents, February 2021 – May 2026. Each row is a failure category, each column a vendor family,
-    and each cell counts incidents. Bars at the right of each row show the same category over time, on one shared scale.</p>
-  </header>
-
-  <div class="controls" role="group" aria-label="Display options">
-    <span>Cells as</span>
-    <button id="mode-shade" class="on" aria-pressed="true">shade</button>
-    <button id="mode-dots" aria-pressed="false">one dot per incident</button>
-    <button id="clear" hidden>clear selection</button>
-  </div>
-
-  <figure id="chart" aria-label="Heatmap of incident counts by category and vendor, with small-multiple time bars"></figure>
-
-  <section id="detail" aria-live="polite">
-    <h2>Individual incidents</h2>
-    <p class="hint">Click a cell, a row label or a column label to list the incidents behind it. Hover a cell to see its share of that row's history.</p>
-    <ol id="list"></ol>
-  </section>
-
-  <footer>
-    <p><strong>Reading it.</strong> Darker cell = more incidents. Colour carries one thing only (the count); the three classes are
-    separated by space and labels, not by hue. In the time bars, gray is the whole row and the dark overlay is the part you are pointing at.</p>
-    <p><strong>Caveats.</strong> “Vendor family” is grouped by hand from the dataset's <em>Affected agentic AI</em> column, which also contains
-    people and organisations harmed by AI output; those fall under “Other / non-vendor”. Counts are logged incidents, not rates.</p>
-  </footer>
-</main>
-<script src="vendor/d3.min.js"></script>
-<script src="main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="192 logged agentic-AI incidents by failure category and vendor, with time small multiples." />
+    <title>Agentic AI Incidents</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
