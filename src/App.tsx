@@ -17,24 +17,22 @@ const top = (xs: string[]) => {
 /** The hero is derived from the current filters: class selection, vendor selection and period all change it. */
 function heroFor(filters: Filters, shown: typeof incidents) {
   const n = shown.length
-  if (n === 0) return { title: "No incidents match these filters", dek: "Widen the period or turn a class or vendor back on.", stats: [] as [number, string][] }
+  if (n === 0) return { title: "No incidents match these filters", when: "", bullets: ["Widen the period or turn a class or vendor back on."], stats: [] as [number, string][] }
 
   const visible = CLASS_ORDER.filter((c) => !filters.hiddenClasses.includes(c))
   const kind = visible.length === CLASS_ORDER.length ? "agentic AI" : join(visible.map((c) => PHRASE[c]!))
   const [lo, hi] = filters.range
   const when = lo === 0 && hi === NBINS - 1 ? `${2021}–${2021 + Math.floor((NBINS - 1) / 2)}` : lo === hi ? binLabel(lo) : `${binLabel(lo)} – ${binLabel(hi)}`
-  const title = `${n} ${kind} ${n === 1 ? "incident" : "incidents"}, ${when}`
+  const title = `${n} ${kind} ${n === 1 ? "incident" : "incidents"}`
 
   const [cat, catN] = top(shown.map((d) => d.cat))!
   const named = shown.filter((d) => d.vendor !== OTHER)
   const vend = named.length ? top(named.map((d) => d.vendor)) : undefined
-  const [bin, binN] = top(shown.map((d) => String(d.bin)))!
-  const parts = [`Most common: ${cat} (${catN}).`]
-  if (vend) parts.push(`Most affected vendor: ${vend[0]} (${vend[1]}).`)
-  if (lo !== hi) parts.push(`Busiest half-year: ${binLabel(+bin)} (${binN}).`)
+  const bullets = [`Most common: ${cat} (${catN})`]
+  if (vend) bullets.push(`Most affected vendor: ${vend[0]} (${vend[1]})`)
 
   const stats = visible.map((c) => [shown.filter((d) => d.cls === c).length, CLASS_SHORT[c]!.toLowerCase()] as [number, string])
-  return { title, dek: parts.join(" "), stats }
+  return { title, when, bullets, stats }
 }
 
 export default function App() {
@@ -53,9 +51,11 @@ export default function App() {
     <TooltipProvider>
       <main className="mx-auto max-w-6xl px-4 py-8 sm:py-12">
         <header className="mb-8 max-w-2xl">
-          <p className="mb-1 text-xs font-medium tracking-wide text-[var(--heat-hi)] uppercase">Agentic AI incidents</p>
           <h1 className="text-2xl font-semibold tracking-tight text-balance sm:text-3xl">{hero.title}</h1>
-          <p className="mt-2 min-h-12 text-muted-foreground text-pretty">{hero.dek}</p>
+          {hero.when && <p className="mt-1 text-lg text-muted-foreground tabular-nums">{hero.when}</p>}
+          <ul className="mt-3 list-disc space-y-0.5 pl-5 text-muted-foreground marker:text-[var(--heat-hi)]">
+            {hero.bullets.map((b) => <li key={b}>{b}</li>)}
+          </ul>
           <dl className="mt-3 flex flex-wrap gap-x-6 gap-y-1 text-sm">
             {hero.stats.map(([v, l]) => (
               <div key={l}><dt className="sr-only">{l}</dt><dd><span className="text-lg font-semibold tabular-nums">{v}</span> <span className="text-muted-foreground">{l}</span></dd></div>
