@@ -1,9 +1,8 @@
 import { CLASS_ORDER, NBINS, VENDOR_LIST, incidents, type Incident } from "./data"
 
-export type Mode = "shade" | "dots"
-export type Filters = { hiddenClasses: string[]; hiddenVendors: string[]; range: [number, number]; mode: Mode }
+export type Filters = { hiddenClasses: string[]; hiddenVendors: string[]; range: [number, number] }
 
-export const DEFAULT_FILTERS: Filters = { hiddenClasses: [], hiddenVendors: [], range: [0, NBINS - 1], mode: "shade" }
+export const DEFAULT_FILTERS: Filters = { hiddenClasses: [], hiddenVendors: [], range: [0, NBINS - 1] }
 
 export const isFiltered = (f: Filters) =>
   f.hiddenClasses.length > 0 || f.hiddenVendors.length > 0 || f.range[0] !== 0 || f.range[1] !== NBINS - 1
@@ -16,7 +15,7 @@ export function readFilters(search: string): Filters {
   const m = /^(\d+)-(\d+)$/.exec(p.get("r") ?? "")
   const lo = m ? Math.min(+m[1]!, NBINS - 1) : 0
   const hi = m ? Math.min(Math.max(+m[2]!, lo), NBINS - 1) : NBINS - 1
-  return { hiddenClasses, hiddenVendors, range: [lo, hi], mode: p.get("m") === "dots" ? "dots" : "shade" }
+  return { hiddenClasses, hiddenVendors, range: [lo, hi] }
 }
 
 export function writeFilters(f: Filters) {
@@ -24,7 +23,6 @@ export function writeFilters(f: Filters) {
   f.hiddenClasses.forEach((c) => p.append("hc", c))
   f.hiddenVendors.forEach((v) => p.append("hv", v))
   if (f.range[0] !== 0 || f.range[1] !== NBINS - 1) p.set("r", `${f.range[0]}-${f.range[1]}`)
-  if (f.mode === "dots") p.set("m", "dots")
   const qs = p.toString()
   history.replaceState(null, "", `${location.pathname}${qs ? `?${qs}` : ""}`)
 }

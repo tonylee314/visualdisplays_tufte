@@ -24,6 +24,7 @@
   /* chart ink: VT Chicago Maroon (#861F41), pale tint to full strength. Colour only ever encodes the count. */
   --heat-lo: #f8eef1;
   --heat-hi: #861f41;
+  --vt-orange: #e5751f; /* VT Burnt Orange, used for the period slider */
   --spark-all: #e3dfe0;
   --spark-sel: #861f41;
 }

@@ -13,12 +13,12 @@ function Slider({ className, value, defaultValue, ...props }: React.ComponentPro
       {...props}
     >
       <SliderPrimitive.Track className="relative h-1.5 w-full grow overflow-hidden rounded-full bg-muted">
-        <SliderPrimitive.Range className="absolute h-full bg-[var(--heat-hi)]" />
+        <SliderPrimitive.Range className="absolute h-full bg-[var(--vt-orange)]" />
       </SliderPrimitive.Track>
       {thumbs.map((_, i) => (
         <SliderPrimitive.Thumb
           key={i}
-          className="block size-4 shrink-0 rounded-full border-2 border-[var(--heat-hi)] bg-background shadow-sm outline-none transition-[box-shadow] hover:ring-4 hover:ring-ring/30 focus-visible:ring-4 focus-visible:ring-ring/50"
+          className="block size-4 shrink-0 rounded-full border-2 border-[var(--vt-orange)] bg-background shadow-sm outline-none transition-[box-shadow] hover:ring-4 hover:ring-ring/30 focus-visible:ring-4 focus-visible:ring-ring/50"
         />
       ))}
     </SliderPrimitive.Root>

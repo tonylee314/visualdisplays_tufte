@@ -5,7 +5,7 @@ import { DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMe
 import { Slider } from "@/components/ui/slider"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { CLASS_LABEL, CLASS_ORDER, CLASS_SHORT, NBINS, VENDOR_LIST, binLabel } from "@/lib/data"
-import { DEFAULT_FILTERS, isFiltered, type Filters, type Mode } from "@/lib/filters"
+import { DEFAULT_FILTERS, isFiltered, type Filters } from "@/lib/filters"
 
 const toggle = (xs: string[], x: string) => (xs.includes(x) ? xs.filter((y) => y !== x) : [...xs, x])
 
@@ -64,16 +64,8 @@ export function FilterBar({ filters, onChange }: { filters: Filters; onChange: (
         />
       </div>
 
-      <div className="space-y-1.5">
-        <div id="lbl-cells" className="text-xs font-medium text-muted-foreground">Cells</div>
-        <ToggleGroup type="single" aria-labelledby="lbl-cells" value={filters.mode} onValueChange={(v) => v && set({ mode: v as Mode })}>
-          <ToggleGroupItem value="shade">Shade</ToggleGroupItem>
-          <ToggleGroupItem value="dots">Dots</ToggleGroupItem>
-        </ToggleGroup>
-      </div>
-
       {isFiltered(filters) && (
-        <Button variant="ghost" size="sm" onClick={() => onChange({ ...DEFAULT_FILTERS, mode: filters.mode })} className="mb-0.5">
+        <Button variant="ghost" size="sm" onClick={() => onChange(DEFAULT_FILTERS)} className="mb-0.5">
           <RotateCcwIcon /> Reset filters
         </Button>
       )}

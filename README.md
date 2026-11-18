@@ -23,7 +23,7 @@ One-time setup: repo **Settings → Pages → Source: GitHub Actions**. Live URL
 | Macro / micro reading | Whole grid = overall pattern; margin totals; each cell = a count; click a cell / row / column for the individual incidents |
 | Layering & separation | Classes are separated by whitespace and italic labels, not boxes or gridlines. In the time bars, gray is the whole row and a dark overlay is the part you point at; bars outside the chosen period fade but stay as context |
 | Color and information | One sequential hue, used only for count, on a fixed scale (a shade means the same count under any filter). Zero cells are left blank |
-| Heatmap | Category × vendor family (columns in a fixed order: OpenAI, Anthropic, Google, Meta, xAI, Microsoft, coding agents & dev tools, companion apps, other); the "Dots" toggle turns each cell into one countable mark per incident |
+| Heatmap | Category × vendor family (columns in a fixed order: OpenAI, Anthropic, Google, Meta, xAI, Microsoft, coding agents & dev tools, companion apps, other); shade only, with the exact count in the tooltip |
 | Small multiples | One bar strip per category: same x (half-years) and same y scale in every row, one shared time axis |
 | Data-ink | No legend box, no borders around the chart, direct labels, no numbers printed inside cells (exact counts are in the tooltip, margin totals and screen-reader labels), annotation computed from the data |
 
