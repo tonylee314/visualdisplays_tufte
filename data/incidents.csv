@@ -1,0 +1,193 @@
+﻿Date,Affected agentic AI,Class,Category
+May-26,Claude for Chrome,Security exploit,Agent goal hijack
+Feb-26,Claude Desktop Extensions,Security exploit,Unexpected code execution
+Apr-26,Microsoft Semantic Kernel,Security exploit,Unexpected code execution
+Apr-26,Anthropic MCP SDKs,Security exploit,Agentic supply chain
+Apr-26,Grafana AI assistant,Security exploit,Agent goal hijack
+May-26,Claude Code / Codex / Cursor / Copilot CLI,Security exploit,Agentic supply chain
+Mar-26,AI coding assistants (npm/MCP),Security exploit,Agentic supply chain
+Feb-26,Snowflake Cortex Code,Security exploit,Unexpected code execution
+May-26,Meta AI,Security exploit,Identity and privilege abuse
+Apr-26,Gemini CLI,Security exploit,Unexpected code execution
+Apr-26,Apple Intelligence,Security exploit,Agent goal hijack
+Apr-26,Claude,Security exploit,Cascading failures
+Apr-26,Unnamed 40 Year Old Man Arrested By Daejeon Police,Safety/guardrail failure,Defamation and fabrication
+Apr-26,ChatGPT,Safety/guardrail failure,Violence and dangerous assistance
+Mar-26,ChatGPT (code execution),Security exploit,Unexpected code execution
+Mar-26,Grammarly,Data exposure,Data exposure and access control
+Mar-26,Grok (xAI),Safety/guardrail failure,Defamation and fabrication
+Mar-26,Van Irion,Safety/guardrail failure,Defamation and fabrication
+Mar-26,Meta,Data exposure,Data exposure and access control
+Feb-26,Cline AI triage bot,Security exploit,Agentic supply chain
+Feb-26,Dji,Security exploit,Identity and privilege abuse
+Feb-26,Claude Code,Security exploit,Cascading failures
+Feb-26,Claude,Security exploit,Cascading failures
+Feb-26,Grok (xAI),Safety/guardrail failure,Harassment and abusive content
+Jan-26,National Weather Service,Safety/guardrail failure,Defamation and fabrication
+Jan-26,Unknown Social Media Account Operators,Safety/guardrail failure,Defamation and fabrication
+Jan-26,Grok (xAI),Safety/guardrail failure,Defamation and fabrication
+Jan-26,White House,Security exploit,Agent goal hijack
+Jan-26,Moltbook Platform Operators,Security exploit,Cascading failures
+Dec-25,MetaGPT / LangChain agents,Security exploit,Memory and context poisoning
+Dec-25,Grok (xAI),Safety/guardrail failure,Defamation and fabrication
+Dec-25,Grok (xAI),Safety/guardrail failure,Minor safety
+Dec-25,Keith Edwards,Safety/guardrail failure,Defamation and fabrication
+Dec-25,Claude,Security exploit,Agent goal hijack
+Dec-25,Heather Hersh,Safety/guardrail failure,Defamation and fabrication
+Nov-25,ServiceNow Now Assist,Security exploit,Insecure inter-agent communication
+Nov-25,Character.ai,Safety/guardrail failure,Minor safety
+Nov-25,ChatGPT,Safety/guardrail failure,Harmful health and medical advice
+Nov-25,Secret Desires,Data exposure,Data exposure and access control
+Nov-25,ChatGPT,Safety/guardrail failure,Self-harm and mental health
+Oct-25,ServiceNow Virtual Agent,Security exploit,Identity and privilege abuse
+Oct-25,MCP server (npm),Security exploit,Agentic supply chain
+Oct-25,Framelink Figma MCP,Security exploit,Unexpected code execution
+Oct-25,Cursor IDE,Security exploit,Unexpected code execution
+Oct-25,Cursor IDE,Security exploit,Unexpected code execution
+Oct-25,Cursor / MCP,Security exploit,Insecure inter-agent communication
+Oct-25,Cursor CLI,Security exploit,Agentic supply chain
+Oct-25,Cursor CLI,Security exploit,Unexpected code execution
+Oct-25,ChatGPT,Safety/guardrail failure,Violence and dangerous assistance
+Oct-25,Unknown Scammers,Safety/guardrail failure,Harmful content
+Oct-25,Google Gemini,Safety/guardrail failure,Defamation and fabrication
+Oct-25,ChatGPT,Safety/guardrail failure,Self-harm and mental health
+Oct-25,ChatGPT,Security exploit,Cascading failures
+Sep-25,Google Gemini,Security exploit,Agent goal hijack
+Sep-25,postmark-mcp (npm),Security exploit,Agentic supply chain
+Sep-25,Salesforce Agentforce,Security exploit,Agent goal hijack
+Sep-25,Visual Studio Code,Security exploit,Unexpected code execution
+Sep-25,Nomi Ai,Safety/guardrail failure,Minor safety
+Sep-25,Google Gemini,Safety/guardrail failure,Self-harm and mental health
+Aug-25,GitHub Copilot / Visual Studio,Security exploit,Unexpected code execution
+Aug-25,Cursor IDE,Security exploit,Unexpected code execution
+Aug-25,Cursor IDE,Security exploit,Agentic supply chain
+Aug-25,Google Gemini,Security exploit,Agent goal hijack
+Aug-25,Grok (xAI),Safety/guardrail failure,Minor safety
+Aug-25,ChatGPT,Safety/guardrail failure,Harmful health and medical advice
+Aug-25,ChatGPT,Security exploit,Agent goal hijack
+Aug-25,ChatGPT,Safety/guardrail failure,Self-harm and mental health
+Aug-25,Deloitte,Safety/guardrail failure,Defamation and fabrication
+Aug-25,Meta AI,Safety/guardrail failure,Minor safety
+Aug-25,ChatGPT,Safety/guardrail failure,Self-harm and mental health
+Jul-25,Replit AI agent,Security exploit,Cascading failures
+Jul-25,Amazon Q (VS Code ext),Security exploit,Agentic supply chain
+Jul-25,Gemini CLI,Security exploit,Unexpected code execution
+Jul-25,SharePoint (agent-leveraged),Security exploit,Unexpected code execution
+Jul-25,Microsoft Copilot Studio,Security exploit,Identity and privilege abuse
+Jul-25,Grok (xAI),Security exploit,Cascading failures
+Jul-25,ChatGPT,Safety/guardrail failure,Self-harm and mental health
+Jul-25,Google Gemini,Safety/guardrail failure,Minor safety
+Jul-25,Gemini CLI,Security exploit,Cascading failures
+Jul-25,xAI,Data exposure,Data exposure and access control
+Jul-25,Fancy Bear,Security exploit,Memory and context poisoning
+Jul-25,ChatGPT,Safety/guardrail failure,Self-harm and mental health
+Jul-25,Urban Cyber Security,Security exploit,Memory and context poisoning
+Jul-25,ChatGPT,Data exposure,Data exposure and access control
+Jun-25,Heroku MCP,Security exploit,Identity and privilege abuse
+Jun-25,MCP Inspector proxy,Security exploit,Unexpected code execution
+Jun-25,LangSmith / Prompt Hub,Security exploit,Agentic supply chain
+May-26,Grok (Bankrbot agent),Security exploit,Agent goal hijack
+Apr-26,Cursor agent (Claude-powered),Security exploit,Cascading failures
+Apr-26,Andon Market 'Luna' agent,Security exploit,Agent goal hijack
+Mar-26,Perplexity Comet,Security exploit,Agent goal hijack
+Jun-25,Microsoft 365 Copilot,Security exploit,Agent goal hijack
+Jun-25,OpenAI,Safety/guardrail failure,Self-harm and mental health
+Jun-25,Character.ai,Safety/guardrail failure,Harmful health and medical advice
+Jun-25,McDonald’s McHire,Security exploit,Identity and privilege abuse
+Jun-25,ChatGPT,Data exposure,Data exposure and access control
+Jun-25,Srikanta Patnaik,Safety/guardrail failure,Defamation and fabrication
+Jun-25,AI dev agent (GitHub),Security exploit,Agent goal hijack
+May-25,Serviceaide,Security exploit,Identity and privilege abuse
+May-25,Guy Edward Bartkus,Safety/guardrail failure,Harmful content
+May-25,ChatGPT,Safety/guardrail failure,Self-harm and mental health
+May-25,ChatGPT,Safety/guardrail failure,Defamation and fabrication
+May-25,ChatGPT,Safety/guardrail failure,Self-harm and mental health
+May-25,ChatGPT,Safety/guardrail failure,Violence and dangerous assistance
+May-25,ChatGPT,Safety/guardrail failure,Violence and dangerous assistance
+Apr-25,A2A directory / agents,Security exploit,Insecure inter-agent communication
+Apr-25,Lovable AI,Security exploit,Memory and context poisoning
+Apr-25,Meta LLaMA,Safety/guardrail failure,Minor safety
+Apr-25,Anthropic,Safety/guardrail failure,Self-harm and mental health
+Apr-25,ChatGPT,Safety/guardrail failure,Self-harm and mental health
+Apr-25,Cyber Criminal Networks,Safety/guardrail failure,Defamation and fabrication
+Apr-25,Cursor,Safety/guardrail failure,Defamation and fabrication
+Apr-25,Meta,Safety/guardrail failure,Minor safety
+Apr-25,Claude,Security exploit,Identity and privilege abuse
+Apr-25,ChatGPT,Safety/guardrail failure,Self-harm and mental health
+Apr-25,Meta AI,Safety/guardrail failure,Defamation and fabrication
+Apr-25,Springer Nature,Safety/guardrail failure,Defamation and fabrication
+Apr-25,ChatGPT,Safety/guardrail failure,Violence and dangerous assistance
+Mar-25,GitHub Copilot / Cursor,Security exploit,Agentic supply chain
+Mar-25,Flowise,Security exploit,Unexpected code execution
+Mar-25,Character.Ai,Safety/guardrail failure,Minor safety
+Mar-25,Scammers Impersonating Meta Support,Security exploit,Identity and privilege abuse
+Mar-25,0Xhungusman,Security exploit,Tool misuse and exploitation
+Mar-25,Meta AI,Safety/guardrail failure,Self-harm and mental health
+Mar-25,ChatGPT,Data exposure,Data exposure and access control
+Feb-25,ChatGPT Operator,Security exploit,Agent goal hijack
+Feb-25,Character.ai,Safety/guardrail failure,Self-harm and mental health
+Feb-25,Unknown Scammers Operating In Mexico,Security exploit,Agent goal hijack
+Feb-25,Tromso Municipality,Safety/guardrail failure,Defamation and fabrication
+Feb-25,Jennifer T. Demaster,Safety/guardrail failure,Defamation and fabrication
+Feb-25,Microsoft Copilot,Security exploit,Cascading failures
+Feb-25,ChatGPT,Safety/guardrail failure,Self-harm and mental health
+Jan-25,James Florence Jr.,Safety/guardrail failure,Harassment and abusive content
+Jan-25,Glimpse Ai,Safety/guardrail failure,Minor safety
+Jan-25,Unknown X (Twitter) Users,Safety/guardrail failure,Defamation and fabrication
+Jan-25,Unnamed 17 Year Old Boy From Osaka,Data exposure,Data exposure and access control
+Jan-25,ChatGPT,Safety/guardrail failure,Self-harm and mental health
+Dec-24,Character.ai,Safety/guardrail failure,Self-harm and mental health
+Dec-24,ChatGPT,Safety/guardrail failure,Harmful content
+Nov-24,Google Gemini,Safety/guardrail failure,Violence and dangerous assistance
+Nov-24,Jeff Hancock,Safety/guardrail failure,Defamation and fabrication
+Nov-24,ChatGPT,Safety/guardrail failure,Defamation and fabrication
+Nov-24,Character.ai,Safety/guardrail failure,Minor safety
+Oct-24,Character.ai,Data exposure,Data exposure and access control
+Oct-24,OpenAI Whisper,Safety/guardrail failure,Violence and dangerous assistance
+Oct-24,Cybercriminals,Data exposure,Data exposure and access control
+Oct-24,Deena Bishop,Safety/guardrail failure,Defamation and fabrication
+Sep-24,Unknown Deepfake Creators,Safety/guardrail failure,Minor safety
+Sep-24,Unknown Deepfake Creators,Safety/guardrail failure,Defamation and fabrication
+Aug-24,Microsoft Copilot,Safety/guardrail failure,Defamation and fabrication
+Aug-24,Charlotte Ingham,Safety/guardrail failure,Harassment and abusive content
+Aug-24,ChatGPT,Safety/guardrail failure,Violence and dangerous assistance
+Jul-24,Grok (xAI),Safety/guardrail failure,Violence and dangerous assistance
+Jul-24,Google Gemini,Data exposure,Data exposure and access control
+Jul-24,ChatGPT,Data exposure,Data exposure and access control
+Jul-24,ChatGPT,Security exploit,Cascading failures
+Jun-24,Character.ai,Safety/guardrail failure,Self-harm and mental health
+Apr-24,Meta AI,Safety/guardrail failure,Defamation and fabrication
+Apr-24,Microsoft Copilot,Safety/guardrail failure,Harmful health and medical advice
+Apr-24,Grok (xAI),Safety/guardrail failure,Defamation and fabrication
+Mar-24,New York City Government,Safety/guardrail failure,Harmful content
+Feb-24,OpenAI Whisper,Safety/guardrail failure,Violence and dangerous assistance
+Feb-24,Character.ai,Safety/guardrail failure,Minor safety
+Jan-24,ChatGPT,Security exploit,Identity and privilege abuse
+Dec-23,General Motors,Security exploit,Agent goal hijack
+Dec-23,Google Bard,Safety/guardrail failure,Defamation and fabrication
+Dec-23,Unnamed Middle School Students,Safety/guardrail failure,Minor safety
+Dec-23,Developers Using Ai Generated Suggestions,Safety/guardrail failure,Defamation and fabrication
+Dec-23,Cybercriminals,Security exploit,Agent goal hijack
+Nov-23,Google Bard,Safety/guardrail failure,Defamation and fabrication
+Nov-23,Character.Ai,Safety/guardrail failure,Self-harm and mental health
+Jun-23,ChatGPT,Safety/guardrail failure,Defamation and fabrication
+May-23,ChatGPT,Safety/guardrail failure,Defamation and fabrication
+May-23,NEDA Tessa chatbot,Safety/guardrail failure,Self-harm and mental health
+May-23,ChatGPT,Safety/guardrail failure,Defamation and fabrication
+Mar-23,Chai chatbot,Safety/guardrail failure,Self-harm and mental health
+Mar-23,ChatGPT,Safety/guardrail failure,Defamation and fabrication
+Mar-23,ChatGPT,Data exposure,Data exposure and access control
+Mar-23,ChatGPT,Data exposure,Data exposure and access control
+Mar-23,ChatGPT,Safety/guardrail failure,Defamation and fabrication
+Feb-23,Bing Chat,Security exploit,Agent goal hijack
+Feb-23,Bing Chat,Safety/guardrail failure,Defamation and fabrication
+Nov-23,ChatGPT,Security exploit,Agent goal hijack
+Nov-23,ChatGPT,Safety/guardrail failure,Defamation and fabrication
+Sep-22,GPT-3,Security exploit,Agent goal hijack
+Feb-22,Tigerweb,Safety/guardrail failure,Minor safety
+Dec-21,Replika,Safety/guardrail failure,Violence and dangerous assistance
+May-21,Replika,Safety/guardrail failure,Harassment and abusive content
+Apr-21,GPT-3,Safety/guardrail failure,Minor safety
+Mar-21,Microsoft Tay,Security exploit,Agent goal hijack
+Mar-21,microsoft,Security exploit,Agent goal hijack
+Feb-21,OpenAI,Data exposure,Data exposure and access control
